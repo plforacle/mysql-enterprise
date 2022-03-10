@@ -23,7 +23,7 @@ This lab assumes you have:
 * An Oracle account
 * All previous labs successfully completed
 
-    **Use ServerB for this lab** 
+    **Use ServerA for this lab** 
     - we call this instance mysql-advanced
     - This is the most used instance in the labs
     - In the last labs we use it as source for replication and primary node for InnoDB Cluster HA
