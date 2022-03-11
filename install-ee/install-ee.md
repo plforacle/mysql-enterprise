@@ -2,13 +2,13 @@
 
 ## Introduction
 
-2b) Detailed Installation of MySQL on Linux
+Detailed Installation of MySQL on Linux
 Objective: Tarball Installation of MySQL 8 Enterprise on Linux
 
 
 Tarball Installation of MySQL 8 Enterprise on Linux
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -26,7 +26,6 @@ This lab assumes you have:
     **Use ServerA for this lab** 
     - we call this instance mysql-advanced
     - This is the most used instance in the labs
-    - In the last labs we use it as source for replication and primary node for InnoDB Cluster HA
 
 * Lab standard  
     - ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> the command must be executed in the Operating System shell
@@ -82,7 +81,7 @@ This lab assumes you have:
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo tar xvf /workshop/linux/mysql-commercial-8.0.25-el7-x86&#95;64.tar.gz</copy>
+    <copy>sudo tar xvf /workshop/linux/mysql-commercial-8.0.28-el7-x86&#95;64.tar.gz</copy>
     ```
 
 14.	Create a symbolic link to mysql binary installation
