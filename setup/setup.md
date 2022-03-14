@@ -34,17 +34,11 @@ This lab assumes you have:
 
 ## Task 2: Record Lab Server info on Notepad
 
-**student###-serverA:**
+**student###-Server:**
   - Hostname:  
   - Hostname FQDN:  
   - Public IP:   (e.g. 130.61.56.195) 
   - Private IP: (e.g. 10.0.11.18)
-
-**student###-serverB:**
-  - Hostname:
-  - Hostname FQDN:
-  - Public IP:  (e.g. 130.61.56.196) 
-  - Private IP: (e.g. 10.0.11.19)
 
 ## Task 3: Review Misc Lab Information
 1. Document standard 
@@ -70,12 +64,9 @@ This lab assumes you have:
     **ServerA** is installed with graphical server and it will be used to
     - install MySQL Workbench, a graphical tool that we use to manage serverB instances
     - (last lab) install a MySQL Enterprise 8.0 used as third node of InnoDB Cluster
-    **ServerB** it will be used for to install
-    - a MySQL Enterprise 8.0, used in most of the labs
-    - (last labs) install a MySQL Enterprise 8.0 used in replication and InnoDB Cluster lab
 
 2.	Sever Connections example
-![Image alt text](images/setup-connections.png)
+![Image alt text](images/Public_image_2.jpg)
 
 3.	Test the connection to your Linux machines from your laptop using these parameters
     - a. SSH connection
