@@ -61,9 +61,8 @@ This lab assumes you have:
 ## Task 4: Setup Lab Server and Connection
 
 1.	Server description
-    **ServerA** is installed with graphical server and it will be used to
-    - install MySQL Workbench, a graphical tool that we use to manage serverB instances
-    - (last lab) install a MySQL Enterprise 8.0 used as third node of InnoDB Cluster
+    **ServerA** will be used to install and run MySQL Enterprise Edition 8.0.
+    - install a MySQL Shell as a command line interface for MySQL Enterprise Edition.
 
 2.	Sever Connections example
 ![Image alt text](images/Public_image_2.jpg)
