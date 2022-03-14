@@ -6,11 +6,8 @@ This workshop covers the configuration and testing of MySQL Security Based Enter
 
 Estimated Workshop Time: 1 hours 30 minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 
-*You may add an option video, using this format: [](youtube:YouTube video id)*
 
-  [](youtube:C12ZJ0ixxX8)
-
-### Objectives
+## Objectives
 
 
 In this workshop, you will learn how to work with 
