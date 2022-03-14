@@ -3,11 +3,11 @@
 ## Introduction
 
 1) Client Setup
-Objective: Connect Notebook to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
+Objective: Connect Personal Computer to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
 
-In this lab you will Download lab materials, plus connect Notebook to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
+In this lab you will Download lab materials, plus connect your Personal Computer to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: -- 10 minutes
 
 ### Objectives
 In this lab, you will:
@@ -55,7 +55,7 @@ This lab assumes you have:
 
 4.	Tip: set the keep alive for SSH connection to 60 seconds, to keep session open during lectures
 
-5.	Linux opc user has limited privileges. To work with administrative privileges, use "sudo" like 
+5.	Linux *opc* user has limited privileges. To work with administrative privileges, use "sudo" like 
 ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> sudo su - root
 
 ## Task 4: Setup Lab Server and Connection
