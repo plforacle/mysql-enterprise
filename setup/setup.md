@@ -44,7 +44,7 @@ This lab assumes you have:
 1. Document standard 
     - When in the manual you read **shell>** the command must be executed in the Operating System shell.
     - When in the manual you read **mysql>** the command must be executed in a client like MySQL, MySQL Shell, MySQL Workbench, etc. We recommend students to use MySQL Shell to practice with it.
-    - When in the manual you read MySQL **mysql>** the command must be executed in MySQL shell.
+    - When in the manual you read MySQL **mysqlsh>** the command must be executed in MySQL shell.
 
 2. Lab standard  
     - ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> the command must be executed in the Operating System shell
@@ -55,7 +55,7 @@ This lab assumes you have:
 
 4.	Tip: set the keep alive for SSH connection to 60 seconds, to keep session open during lectures
 
-5.	Linux *opc* user has limited privileges. To work with administrative privileges, use "sudo" like 
+5.	Linux ***opc*** user has limited privileges. To work with administrative privileges, use "sudo" like 
 ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> sudo su - root
 
 ## Task 4: Setup Lab Server and Connection
