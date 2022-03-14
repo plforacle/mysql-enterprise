@@ -44,7 +44,7 @@ This lab assumes you have:
 1. Document standard 
     - When in the manual you read **shell>** the command must be executed in the Operating System shell.
     - When in the manual you read **mysql>** the command must be executed in a client like MySQL, MySQL Shell, MySQL Workbench, etc. We recommend students to use MySQL Shell to practice with it.
-    - When in the manual you read MySQL **mysqlsh>** the command must be executed in MySQL shell.
+    - When in the manual you read MySQL **mysqlsh>** the command must be executed in MySQL Shell.
 
 2. Lab standard  
     - ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> the command must be executed in the Operating System shell
@@ -61,10 +61,13 @@ This lab assumes you have:
 ## Task 4: Setup Lab Server and Connection
 
 1.	Server description
-    **ServerA** will be used to install and run MySQL Enterprise Edition 8.0.
-    - install a MySQL Shell as a command line interface for MySQL Enterprise Edition.
+    **ServerA** will be used to run the full Workshop on.  You will:
+    - Install MySQL Enterprise Edition 8.0.
+    - Install a MySQL Shell as a command line interface for MySQL Enterprise Edition.
+    - Install a Sample Database - Employees 
 
-2.	Sever Connections example
+2.	Sever Connections example:
+
 ![Image alt text](images/Public_image_2.jpg)
 
 3.	Test the connection to your Linux machines from your laptop using these parameters
