@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Detailed Installation of MySQL on Linux
+Detailed Installation of MySQL Enterprise Edition 8.0 and MySQL Shell on Linux
 Objective: Tarball Installation of MySQL 8 Enterprise on Linux
 
 
-Tarball Installation of MySQL 8 Enterprise on Linux
+Tarball Installation of MySQL Enterprise 8 on Linux
 
 Estimated Time: 16 minutes
 
@@ -15,6 +15,7 @@ Estimated Time: 16 minutes
 In this lab, you will:
 * Install MySQL Enterprise Edition
 * Start and test MySQL Enterpriese Edition Install
+* Install MySQL Shell and Connect to MySQL Enterprise 
 
 
 ### Prerequisites
@@ -22,10 +23,6 @@ In this lab, you will:
 This lab assumes you have:
 * An Oracle account
 * All previous labs successfully completed
-
-    **Use ServerA for this lab** 
-    - we call this instance mysql-advanced
-    - This is the most used instance in the labs
 
 * Lab standard  
     - ![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell> the command must be executed in the Operating System shell
