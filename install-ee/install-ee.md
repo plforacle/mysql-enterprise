@@ -8,7 +8,7 @@ Objective: Tarball Installation of MySQL 8 Enterprise on Linux
 
 Tarball Installation of MySQL 8 Enterprise on Linux
 
-Estimated Time: 15 minutes
+Estimated Time: 16 minutes
 
 ### Objectives
 
