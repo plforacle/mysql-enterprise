@@ -64,7 +64,7 @@ This lab assumes you have:
     **ServerA** will be used to run the full Workshop on.  You will:
     - Install MySQL Enterprise Edition 8.0.
     - Install a MySQL Shell as a command line interface for MySQL Enterprise Edition.
-    - Install a Sample Database - Employees 
+    - Install the Sample Employees Database
 
 2.	Sever Connections example:
 
