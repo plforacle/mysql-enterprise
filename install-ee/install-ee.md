@@ -122,7 +122,7 @@ To help you we created one with some variables, please copy it
     ```
     <copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf --initialize --user=mysqluser</copy>
     ```
-## Task 2: Start and test MySQL Enterpriese Edition Install
+## Task 2: Start and test MySQL Enterprise Edition Install
 
 1.	Start your new mysql instance
 
