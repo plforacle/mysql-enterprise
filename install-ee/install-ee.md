@@ -183,11 +183,11 @@ To help you we created one with some variables, please copy it
     <copy>sudo yum -y install /workshop/Shell/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
     ```
 
-12.	Login to you mysql-advanced installation and check the status (you will be asked to change password). You can use the community mysql or the one provided with enterprise package
+12.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>/mysql/mysql-latest/bin/mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
+    <copy>mysqlsh --url root@localhost:3306 --sql -p</copy>
     ```
 
 14. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
