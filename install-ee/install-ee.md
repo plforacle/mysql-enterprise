@@ -189,6 +189,13 @@ To help you we created one with some variables, please copy it
     ```
     <copy>mysqlsh --url root@localhost:3306 --sql -p</copy>
     ```
+14. Creat New Password for MySQL Root
+
+15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>
+    ```
+    <copy>ALTER USER 'root'@'%' IDENTIFIED BY 'Welcome1'</copy>
+    ```
+
 
 14. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
