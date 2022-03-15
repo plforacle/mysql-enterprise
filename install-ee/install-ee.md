@@ -177,6 +177,7 @@ To help you we created one with some variables, please copy it
     - Reload privilege tables now: Y
 
 11. Install the MySQL Shell command line utility
+
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
     <copy>sudo yum -y install /workshop/Shell/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
