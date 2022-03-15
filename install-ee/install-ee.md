@@ -265,52 +265,40 @@ To help you we created one with some variables, please copy it
 
 29.	Create a new administrative user called 'admin' with remote access and full privileges
 
-30. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+30. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
     ```
-    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
+    <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
     ```
 
-31. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+31. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>CREATE USER 'admin'@'%' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
-32. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+32. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;</copy>
     ```
 
-33.	In the configuration file was specified to load the commercial Thread Pool Plugin, check if it’s loaded and active:
+33.	Add the mysql bin folder to the bash profile
 
-34. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+34. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
-    <copy>select * from information&#95;schema.plugins where plugin&#95;name like 'thread%';</copy>
-    ```
-
-35. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
- 
-    ```
-    <copy>select * from information&#95;schema.plugins where plugin&#95;name like 'thread%'\G</copy>
-    ```
-36.	Add the mysql bin folder to the bash profile
-
-37. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>exit</copy>
+    <copy>\quit</copy>
     ```
 
-38. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+35. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>nano /home/opc/.bash&#95;profile</copy>
     ```
 
-39. At to the PATH variable “/mysql/mysql-latest/bin:” 
+36. At to the PATH variable “/mysql/mysql-latest/bin:” 
 
     after $PATH You’ll have something like
 
     PATH=$PATH:/mysql/mysql-latest/bin:$HOME/.local/bin:$HOME/bin
 
-40. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
+37. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
 
 
 ## Learn More
@@ -321,6 +309,6 @@ To help you we created one with some variables, please copy it
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Engineering
-* **Contributors** -  Marco Carlessi, MySQL Engineering
-* **Last Updated By/Date** - <Perside Foster, October 2021
+* **Author** - Dale Dasker, MySQL Solution Engineering
+* **Contributors** -  Dale Dasker, MySQL Solution Engineering
+* **Last Updated By/Date** - <Dale Dasker, March 2022
