@@ -203,9 +203,9 @@ To help you we created one with some variables, please copy it
 
 15.	Shutdown the service
 
-16. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+16. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
-    <copy>exit</copy>
+    <copy>\quit</copy>
     ```
 
 17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
