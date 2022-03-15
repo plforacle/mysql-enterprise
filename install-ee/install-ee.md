@@ -191,15 +191,14 @@ To help you we created one with some variables, please copy it
     ```
 14. Creat New Password for MySQL Root
 
-15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>
+15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
-    <copy>ALTER USER 'root'@'%' IDENTIFIED BY 'Welcome1'</copy>
+    <copy>ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome1'</copy>
     ```
-
 
 14. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>status</copy>
+    <copy>\status</copy>
     ```
 
 15.	Shutdown the service
