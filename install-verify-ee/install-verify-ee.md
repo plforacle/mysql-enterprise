@@ -8,13 +8,6 @@ Objectives:
 •	install test databases for labs (world and employees)
 •	have a look on useful statements
 
-Server: serverB
-
-Verify the new MySQL Installation on Linux and import test databases
-Understand better how MySQL connection works
-Install test databases for labs (world and employees)
-Have a look on useful statements
-
 
 Estimated Time: -- minutes
 
@@ -22,11 +15,9 @@ Estimated Time: -- minutes
 
 In this lab, you will:
 * Discuss MySQL Connection 
-* Connect to Ports 3306 and 3307
-* Remove MySQL Community Installation and Iimport Databses
+* Connect to Ports 3306
+* Import Sample Databses
 * Learn Useful SQL Statements
-
-**Use ServerB for this lab**
 
 ### Prerequisites
 
