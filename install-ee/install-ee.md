@@ -31,7 +31,7 @@ This lab assumes you have:
     
 ## Task 1: Install MySQL Enterprise Edition
 
-1.	Usually to run mysql  the user “mysql” is used, but because it is already available we show here how create a new one.
+1. Usually to run mysql  the user “mysql” is used, but because it is already available we show here how create a new one.
 2. Create a new user/group for your MySQL service (mysqluser/mysqlgrp) and a add ‘mysqlgrp’ group to opc to help labs execution. 
 
 3.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
@@ -85,7 +85,7 @@ This lab assumes you have:
 
 15. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo ln -s mysql-commercial-8.0.25-el7-x86&#95;64 mysql-latest</copy>
+    <copy>sudo ln -s mysql-commercial-8.0.28-el7-x86&#95;64 mysql-latest</copy>
     ```
 
 16.	Create a new configuration file my.cnf inside /mysql/etc
@@ -135,12 +135,12 @@ To help you we created one with some variables, please copy it
 
 4.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>eps -ef | grep mysqld</copy>
+    <copy>ps -ef | grep mysqld</copy>
     ```
 
 5.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>netstat -an | grep 3307</copy>
+    <copy>netstat -an | grep 3306</copy>
     ```
 
 
@@ -160,9 +160,9 @@ To help you we created one with some variables, please copy it
 
 10.	Before version 5.7 it was recommended to run the mysql&#95;secure&#95;installation script. From version 5.7 all these settings are by default, but the script can be used also to setup the validate&#95;password plugin (used later). Now execute mysql&#95;secure&#95;installation
 
-11. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>/mysql/mysql-latest/bin/mysql&#95;secure&#95;installation -P3307 -h127.0.0.1 </copy>
+    <copy>/mysql/mysql-latest/bin/mysql&#95;secure&#95;installation -P3306 -h127.0.0.1 </copy>
     ```
 
     **use the following  values**
@@ -176,11 +176,17 @@ To help you we created one with some variables, please copy it
     - Remove test database: Y
     - Reload privilege tables now: Y
 
+11. Install the MySQL Shell command line utility
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+     ```
+    <copy>sudo yum -y install /workshop/Shell/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
+    ```
+
 12.	Login to you mysql-advanced installation and check the status (you will be asked to change password). You can use the community mysql or the one provided with enterprise package
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>mysql -uroot -p -h 127.0.0.1 -P 3307</copy>
+    <copy>/mysql/mysql-latest/bin/mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
     ```
 
 14. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
@@ -197,7 +203,7 @@ To help you we created one with some variables, please copy it
 
 17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3307 shutdown</copy>
+    <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3306 shutdown</copy>
     ```
 
 18.	Configure automatic startup and shutdown with system.
@@ -254,7 +260,7 @@ To help you we created one with some variables, please copy it
 
 30. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>mysql -uroot -p -h 127.0.0.1 -P 3307</copy>
+    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
     ```
 
 31. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
