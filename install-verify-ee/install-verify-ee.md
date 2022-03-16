@@ -17,7 +17,7 @@ Estimated Time: -- minutes
 
 In this lab, you will:
 * Discuss MySQL Connection 
-* Connect to Ports 3306
+* Connect to Port 3306
 * Import Sample Databses
 * Learn Useful SQL Statements
 
@@ -34,7 +34,7 @@ This lab assumes you have:
     
 ## Task 1: Discuss MySQL Connection 
 
-Please note that now you have 2 instances on the same server: one on 3306 and one on 3307. To connect to the correct one, always use the IP address, otherwise you may connect to wrong instance. Here we practice connecting to the right one (por t3310 is intentionally wrong). To help you understand “why” these check lines (not all are always available…)
+Please note that now you have an instance on the same server: on 3306. To connect to MySQL, always use the IP address, otherwise you may connect to wrong instance. Here we practice connecting to the right one (por t3310 is intentionally wrong). To help you understand “why” these check lines (not all are always available…)
 
 - Current user:
 - Connection:
