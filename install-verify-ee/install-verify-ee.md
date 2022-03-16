@@ -2,7 +2,7 @@
 
 ## Introduction
 
-2c) Verify the new MySQL Installation on Linux and import test databases
+2) Verify the new MySQL Installation on Linux and import test databases
 Objectives: 
 •	understand better how MySQL connection works
 •	install test databases for labs (world and employees)
