@@ -6,9 +6,9 @@ Goal:
     Verify the new MySQL Installation on Linux and import test databases
 
 Objectives: 
-•	understand better how MySQL connection works
-•	install test databases for labs (world and employees)
-•	have a look on useful statements
+- understand better how MySQL connection works
+- install test databases for labs (world and employees)
+- have a look on useful statements
 
 
 Estimated Time: -- minutes
