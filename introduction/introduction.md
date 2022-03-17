@@ -10,6 +10,7 @@ Estimated Workshop Time: 1 hours 30 minutes (This estimate is for the entire wor
 ## Objectives
 
 
+
 In this workshop, you will learn how to work with 
 - MySQL Enterprise Edition
 - MySQL Shell
