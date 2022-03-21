@@ -1,12 +1,10 @@
 # SECURITY - MYSQL ENTERPRISE AUDIT
 
 ## Introduction
-3d) MySQL Enterprise Audit
+MySQL Enterprise Audit
 Objective: Auditing in action…
-Server: serverB
 
-
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 
@@ -30,12 +28,9 @@ This lab assumes you have:
 **Notes:**
 - Audit can be activated and configured without stop the instance. In the lab we edit my.cnf to see how to do it in this way
 
-**Server:** serverB
-
-
 ## Task 1: Setup Audit Log
 
-1. Enable Audit Log on mysql-advanced (remember: you can’t install on mysql-gpl).  Audit is COMMERCIAL plugin.
+1. Enable Audit Log on mysql-enterprise (remember: you can’t install on mysql-gpl).  Audit is an Enterprise plugin.
 
     a. Edit the my.cnf setting in /mysql/etc/my.cnf
 
