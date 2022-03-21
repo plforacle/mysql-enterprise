@@ -58,7 +58,11 @@ This lab assumes you have:
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo systemctl restart mysqld-advanced</copy>
+    <copy>mysqladmin -uroot -p -h 127.0.0.1 -P3306 shutdown</copy>
+    ```
+     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf $MYSQLD_OPTS &</copy>
     ```
 ## Task 2: Use Audit 
 
