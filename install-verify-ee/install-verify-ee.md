@@ -91,17 +91,7 @@ Please note that now you have an instance on the server on port 3306. To connect
     <copy>sudo yum remove mysql-server</copy>
 
     ```
-2.	Import the world database, that will be used later, from
-    `c:\workshop\databases\world`
-    
-    You can do it with mysql client
-
-  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
-
-    ```
-    <copy>mysql -uroot -p -P3307 -h 127.0.0.1 < /workshop/databases/world/world.sql</copy>
-    ``` 
-3.	Import the employees demo database that is in /workshop/databases folder.
+2.	Import the employees demo database that is in /workshop/databases folder.
 
   **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
@@ -110,14 +100,14 @@ Please note that now you have an instance on the server on port 3306. To connect
 
   **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>mysql -uroot -p -P3307 -h 127.0.0.1 < ./employees.sql</copy>
+    <copy>mysql -uroot -p -P3306 -h 127.0.0.1 < ./employees.sql</copy>
     ```
 ## Task 4: Learn Useful SQL Statements
 
 1. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
 
     ```
-    <copy>mysql -uroot -p -h 127.0.0.1 -P 3307</copy>
+    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
     ```
 2. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
