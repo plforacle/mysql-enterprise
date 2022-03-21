@@ -78,7 +78,7 @@ Please note that now you have an instance on the server on port 3306. To connect
 7.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
-    <copy>mysql --defaults-file=/mysql/etc/my.cnf -uroot -p -h localhost -P3310</copy>
+    <copy>mysql -uroot -p -h localhost -P3310 --protocol=tcp </copy>
     ```
 
 8.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
