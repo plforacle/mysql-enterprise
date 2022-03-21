@@ -66,19 +66,19 @@ This lab assumes you have:
     ```
 ## Task 2: Use Audit 
 
-1. Login to a mysql-advanced with the user “appuser”, then submit some commands
+1. Login to mysql-enterprise with the user “appuser1”, then submit some commands
 
     a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>mysql -u appuser2 -p -h 127.0.0.1 -P 3307</copy>
+    <copy>mysql -u appuser1 -p -h 127.0.0.1 -P 3306</copy>
     ```
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
     ```
-    <copy>USE world;</copy>
+    <copy>USE employees;</copy>
     ```
     c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>SELECT * FROM city limit 25;</copy>
+    <copy>SELECT * FROM employees limit 25;</copy>
     ```
     d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
