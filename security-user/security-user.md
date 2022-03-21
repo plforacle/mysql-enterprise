@@ -33,7 +33,7 @@ This lab assumes you have:
 
 - serverA  PRIVATE ip: (client_ip)
 
-## Task 1: Connect to mysql-advanced om serverA
+## Task 1: Connect to mysql-enterprise om Server
 
 1. Connect to your mysql-enterprise with administrative user
 
