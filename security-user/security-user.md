@@ -107,8 +107,8 @@ This lab assumes you have:
     <copy>SELECT * FROM employees;</copy>
     ```
 
-## Task 3: Use appuser connection
-1.	Close and reopen the appuser connection for the user, then repeat above commands. There is a difference? 
+## Task 3: Use appuser1 connection
+1.	Close and reopen the appuser1 connection for the user, then repeat above commands. There is a difference? 
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
@@ -195,6 +195,6 @@ This lab assumes you have:
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Engineering
-* **Contributors** -  Marco Carlessi, MySQL Engineering
-* **Last Updated By/Date** - <Perside Foster, October 2021
+* **Author** - Dale Dasker, MySQL Solution Engineering
+* **Contributors** -  Perside Foster, MySQL Engineering
+* **Last Updated By/Date** - <Dale Dasker, March 2022
