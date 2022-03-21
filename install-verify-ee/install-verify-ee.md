@@ -171,6 +171,6 @@ Please note that now you have an instance on the server on port 3306. To connect
 * [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Engineering
-* **Contributors** -  Marco Carlessi, MySQL Engineering
-* **Last Updated By/Date** - <Perside Foster, October 2021
+* **Author** - Dale Dasker, MySQL Solution Engineering
+* **Contributors** -  Perside Foster, MySQL Engineering
+* **Last Updated By/Date** - <Dale Dasker, March 2022
