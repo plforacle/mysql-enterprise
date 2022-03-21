@@ -2,26 +2,20 @@
 
 ## Introduction
 
-3a) Users management
-Objective: explore user creation and privileges
-Server: 
-•	serverA as client
-•	serverB as server
+Users management
+Objective: explore user creation and privileges on a Server 
 
 
+*This lab walks you through creating some users which will be used to Audit.
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
-
-Estimated Time: -- minutes
+Estimated Time: 10 minutes
 
 
 ### Objectives
 
 In this lab, you will  do the followings:
-- Connect to mysql-advanced om serverA
-- Connect to a second mysql-advanced om serverA
-- Use appuser connection
-- Restore user privileges
+- Connect to mysql-enterprise
+- Create appuser 
 
 ### Prerequisites
 
@@ -34,25 +28,19 @@ This lab assumes you have:
     - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql> the command must be executed in a client like MySQL, MySQL Workbench
     - ![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh> the command must be executed in MySQL shell
     
-**Server:** 
-- serverA as client
-- serverB as server
-
 **Notes:**
-- use two shell, one per server
-- Open a notepad file and  your linux Private IP on student###-serverA and serverB 
+- Open a notepad file and  your linux Private IP on student###-serverA 
 
 - serverA  PRIVATE ip: (client_ip)
-- serverB  PRIVATE ip: (server_ip)
 
 ## Task 1: Connect to mysql-advanced om serverA
 
-1. Connect to your mysql-advanced with administrative user
+1. Connect to your mysql-enterprise with administrative user
 
    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
-    <copy>mysql -uroot -p -h 127.0.0.1 -P 3307</copy>
+    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
     ```
 
 2. Create a new user and restrict the user to your “serverA” IP
