@@ -48,19 +48,19 @@ This lab assumes you have:
 	a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>CREATE USER 'appuser'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    <copy>CREATE USER 'appuser1'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
 	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON world.* TO 'appuser'@<client_ip>;</copy>
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@<client_ip>;</copy>
     ```
 
 	c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SHOW GRANTS FOR 'appuser'@<client_ip>;</copy>
+    <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
     ```
 ## Task 2: Connect to a second mysql-advanced om serverA
 1. Open a new SSH connection on serverA and from there connect to mysql-advanced with appuser
