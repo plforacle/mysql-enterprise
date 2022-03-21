@@ -34,14 +34,14 @@ This lab assumes you have:
     
 ## Task 1: Discuss MySQL Connection 
 
-Please note that now you have an instance on the same server: on 3306. To connect to MySQL, always use the IP address, otherwise you may connect to wrong instance. Here we practice connecting to the right one (port 3310 is intentionally wrong). To help you understand “why” these check lines (not all are always available…)
+Please note that now you have an instance on the server on port 3306. To connect to MySQL, always use the IP address, otherwise you may connect to wrong instance. Here we practice connecting to the right one (port 3310 is intentionally wrong). To help you understand “why” these check lines (not all are always available…)
 
 - Current user:
 - Connection:
 - UNIX socket:
 - TCP port:
 
-## Task 2: 	Connect to Ports 3306 and 3307
+## Task 2: 	Connect to Ports 3306 
 
 1.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
 
