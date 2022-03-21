@@ -187,12 +187,44 @@ This lab assumes you have:
     ```
     <copy>alter user 'appuser'@<client_ip> identified by 'Welcome1!'</copy>
     ```
+
+## Task 5: Add additional users
+
+1. Using the Administrative Connection, create a new user and restrict the user to your “Server” IP
+
+	a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>CREATE USER 'appuser2'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    ```
+
+	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser2'@<client_ip>;</copy>
+    ```
+
+2. Using the Administrative Connection, create another new user and restrict the user to your “Server” IP
+
+    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>CREATE USER 'appuser3'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    ```
+
+	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser3'@<client_ip>;</copy>
+    ```
+
+
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [CREATE USER](https://dev.mysql.com/doc/refman/8.0/en/create-user.html)
+* [MySQL Access Control Lists](https://dev.mysql.com/doc/refman/8.0/en/access-control.html)
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
