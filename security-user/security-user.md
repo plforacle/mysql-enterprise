@@ -43,7 +43,7 @@ This lab assumes you have:
     <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
     ```
 
-2. Create a new user and restrict the user to your “serverA” IP
+2. Create a new user and restrict the user to your “Server” IP
 
 	a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
@@ -62,36 +62,28 @@ This lab assumes you have:
     ```
     <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
     ```
-## Task 2: Connect to a second mysql-advanced om serverA
-1. Open a new SSH connection on serverA and from there connect to mysql-advanced with appuser
+## Task 2: Connect to a second mysql-enterprise om Server
+1. Open a new SSH connection on Server and from there connect to mysql-enterprise with appuser1
 
-	a. Install mysql client
-	 
-    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-
-    ```
-    <copy>sudo yum install /workshop/linux/client/*.rpm</copy>
-    ```
-
-	b. connect to mysql-advanced with appuser
+	a. connect to mysql-enterprise with appuser1
     
    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
-    <copy>mysql -u appuser -p -h <server_ip> -P 3307</copy>
+    <copy>mysql -u appuser1 -p -h <server_ip> -P 3306</copy>
     ```
-	c. Run a select on the tables e.g.
+	b. Run a select on the tables e.g.
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>USE world;</copy>
+    <copy>USE employees;</copy>
     ```
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SELECT * FROM city;</copy>
+    <copy>SELECT * FROM employees;</copy>
     ```
 
 2. Switch to the administrative connection revoke privilege on city to appuser
