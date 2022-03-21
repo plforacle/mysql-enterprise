@@ -62,7 +62,7 @@ This lab assumes you have:
     ```
     <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
     ```
-## Task 2: Connect to a second mysql-enterprise om Server
+## Task 2: Connect to a second mysql-enterprise on Server
 1. Open a new SSH connection on Server and from there connect to mysql-enterprise with appuser1
 
 	a. connect to mysql-enterprise with appuser1
