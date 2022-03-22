@@ -38,7 +38,7 @@
         {
             "title": "Lab 6: Security - MySQL Enterprise Transparent Data Encryption (TDE)",
             "description": "Security - MySQL Enterprise Transparent Data Encryption (TDE)",
-            "filename": "../../ha-innodb-cluster/ha-innodb-cluster.md"
+            "filename": "../../security-tde/security-tde.md"
         },
         {
             "title": "Lab 7: Addemdum",
