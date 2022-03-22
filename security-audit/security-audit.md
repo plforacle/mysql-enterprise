@@ -302,12 +302,16 @@ This lab assumes you have:
 
 9. Some Administrative commands for checking Audit filters and users.  Log in using the Administrative Connection,
 
-   a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+   a. Check existing filters:
+
+   **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
     <copy>SELECT * FROM mysql.audit_log_filter;</copy>
     ```
-   b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+   b. Check Users being Audited:
+   
+   **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
     <copy>SELECT * FROM mysql.audit_log_user;</copy>
