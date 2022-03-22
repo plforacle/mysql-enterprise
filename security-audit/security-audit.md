@@ -313,10 +313,11 @@ This lab assumes you have:
     <copy>SELECT * FROM mysql.audit_log_user;</copy>
     ```
    c. Global Audit log disable
+
    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SELECT * FROM mysql.audit_log_user;</copy>
+    <copy>SET GLOBAL audit_log_disable = true;</copy>
     ```
 
 
