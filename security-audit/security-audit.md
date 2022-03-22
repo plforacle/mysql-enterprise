@@ -170,6 +170,12 @@ This lab assumes you have:
     ```
     <copy>SELECT audit_log_filter_remove_filter('log_conn_events ');</copy>
     ```
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_flush();</copy>
+    ```
+
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
