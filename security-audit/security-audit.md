@@ -143,6 +143,20 @@ This lab assumes you have:
     <copy>SELECT audit_log_filter_set_user('%', 'log_conn_events');</copy>
     ```
 
+3. Let's setup Audit to only log unique users. Using the Administrative Connection, create a Audit Filter for appuser1 
+
+    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_filter('log_all', '{ "filter": { "log": true } }');</copy>
+    ```
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_user('appuser1'@'<client IP>', 'log_all');</copy>
+    ```
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
 3. Open the audit.log file the datadir and verify the content
 
      **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
