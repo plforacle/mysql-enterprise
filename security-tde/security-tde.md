@@ -1,19 +1,17 @@
-# SECURITY - MYSQL ENTERPRISE FIREWALL
+# SECURITY - MYSQL ENTERPRISE TRANSPARENT DATA ENCRYPTION
 
 ## Introduction
-3c) MySQL Enterprise Firewall
-Objective: Firewall in action…
-Server: serverB
+3c) MySQL Enterprise Transparent Data Encryption
+Objective: Data Encryption in action…
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+This lab will walk you through encrypting InnoDB Tablespace files at rest
 
-Estimated Lab Time: -- minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 
 In this lab, you will:
-* Install and connect Firewall
-* Use fwtest
+* Install and encrypt Data Files
 
 ### Prerequisites (Optional)
 
@@ -26,11 +24,10 @@ This lab assumes you have:
     - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql> the command must be executed in a client like MySQL, MySQL Workbench
     - ![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh> the command must be executed in MySQL shell
     
-**Server:** serverB
 
 **Notes:**
 - References
-- https://dev.mysql.com/doc/refman/8.0/en/firewall-installation.html
+- https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html
 
 
 ## Task 1: Install and connect  Firewall
