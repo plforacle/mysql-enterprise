@@ -165,6 +165,7 @@ This lab assumes you have:
 3. Let's setup Audit to only log unique users. Using the Administrative Connection, create a Audit Filter for appuser1 
 
     a. Remove previous filter:
+
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
