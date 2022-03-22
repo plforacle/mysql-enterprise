@@ -133,10 +133,10 @@ This lab assumes you have:
 
 ## Learn More
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Keyring Plugins](https://dev.mysql.com/doc/refman/8.0/en/keyring.html)
+* [InnoDB Data At Rest](https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html)
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Engineering
-* **Contributors** -  Marco Carlessi, MySQL Engineering
-* **Last Updated By/Date** - <Perside Foster, October 2021
+* **Author** - Dale Dasker, MySQL Solution Engineering
+* **Contributors** -  
+* **Last Updated By/Date** - <Dale Dasker, March 2022
