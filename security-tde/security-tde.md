@@ -122,93 +122,16 @@ This lab assumes you have:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>ALTER TABLESPACE mysql ENCRYPTION = 'Y';</copy>
+    ```
 
     d. Show all the encrypted tables:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>SELECT SPACE, NAME, SPACE_TYPE, ENCRYPTION FROM INFORMATION_SCHEMA.INNODB_TABLESPACES WHERE ENCRYPTION='Y'\G</copy>
+    ```
 
 
-7.	Administrative connection: switch Firewall mode from 'recording' to 'protecting' and verify the presence of rules in allowlist
-
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>CALL mysql.sp_set_firewall_mode('fwtest@%', 'PROTECTING');</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT * FROM mysql.firewall_whitelist;</copy>
-    ```
-## Task 2: Use fwtest
-1.	fwtest connection: run these commands. Which one’s work? Which ones fail and why?
-
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>USE world;</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-    ```
-    <copy>SELECT * FROM city limit 25;</copy>
-    ```
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT Code, Name, Region FROM country WHERE population > 200000;</copy>
-    ```
-    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT * FROM countrylanguage;</copy>
-    ```
-    e. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT Code, Name, Region FROM country WHERE population > 500000;</copy>
-    ```
-    f. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT Code, Name, Region FROM country WHERE population > 200000 or 1=1;</copy>
-    ```
-2.	Administrative connection: set firewall in detecting mode in your 
-
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>CALL mysql.sp_set_firewall_mode('fwtest@%', 'DETECTING');</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-    ```
-    <copy>SET GLOBAL log_error_verbosity=3;</copy>
-    ```
-3.	fwtest connection: Repeat a blocked command (it works? Why? ___________________)
-
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-    ```
-    <copy>SELECT Code, Name, Region FROM world.country WHERE population > 200000 or 1=1;</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>exit</copy>
-    ```
-4.	Search the error in the error log
-
-    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
-    ```
-    <copy>grep "MY-011191" /mysql/log/err_log.log</copy>
-    ```
-5.	Administrative connection: disable firewall for the user Check the Status of Firewall on the command line. Disabling firewall doesn't delete rules.
-
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>CALL mysql.sp_set_firewall_mode('fwtest@%', 'OFF');</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT MODE FROM INFORMATION_SCHEMA.MYSQL_FIREWALL_USERS WHERE USERHOST = 'fwtest@%';</copy>
-    ```
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-    ```
-    <copy>SELECT RULE FROM INFORMATION_SCHEMA.MYSQL_FIREWALL_WHITELIST WHERE USERHOST = 'fwtest@%';</copy>
-    ```
 ## Learn More
-
-*(optional - include links to docs, white papers, blogs, etc)*
 
 * [URL text 1](http://docs.oracle.com)
 * [URL text 2](http://docs.oracle.com)
