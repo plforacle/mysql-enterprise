@@ -88,7 +88,18 @@ This lab assumes you have:
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>audit_log_filter_set_user('%', 'log_all');</copy>
+    <copy>SELECT audit_log_filter_set_user('%', 'log_all');</copy>
+    ```
+
+     g. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>exit</copy>
+    ```
+
+     h. Monitor the output of the audit.log file:
+      **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>tail -f /mysql/data/audit.log</copy>
     ```
 
 
@@ -112,6 +123,8 @@ This lab assumes you have:
     ```
     <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
     ```
+   
+    ``` 
 2. Open the audit.log file the datadir and verify the content
 
      **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
