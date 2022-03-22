@@ -259,15 +259,16 @@ This lab assumes you have:
      }
 }';</copy>
 
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+   c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
     <copy>SELECT audit_log_filter_set_filter('salary_insert', @f);</copy>
     ```
-    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+   d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SELECT audit_log_filter_set_user(%, 'salary_insert');</copy>
+    <copy>SELECT audit_log_filter_set_user('%', 'salary_insert');</copy>
     ```
 
 
