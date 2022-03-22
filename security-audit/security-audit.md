@@ -162,7 +162,7 @@ This lab assumes you have:
     <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
     ```
 
-3. Let's setup Audit to only log unique users. Using the Administrative Connection, create a Audit Filter for appuser1 
+4. Let's setup Audit to only log unique users. Using the Administrative Connection, create a Audit Filter for appuser1 
 
     a. Remove previous filter:
 
@@ -188,6 +188,65 @@ This lab assumes you have:
     <copy>SELECT audit_log_filter_set_user('appuser1@<client IP>', 'log_all');</copy>
     ```
     d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+5.  Login to mysql-enterprise with the user “appuser1”, then submit some commands
+
+    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>mysql -u appuser1 -p -h<server IP> -P 3306</copy>
+    ```
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+    ```
+    <copy>USE employees;</copy>
+    ```
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SELECT * FROM employees limit 25;</copy>
+    ```
+    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
+    ```
+
+6.  Login to mysql-enterprise with the user “appuser2”, then submit some commands
+
+    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>mysql -u appuser2 -p -h127.0.0.1 -P 3306</copy>
+    ```
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+    ```
+    <copy>USE employees;</copy>
+    ```
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SELECT * FROM employees limit 25;</copy>
+    ```
+    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
+    ```
+
+7. Let's setup Audit to only log access to salaries tables. Using the Administrative Connection, create a Audit Filter for salaries 
+
+    a. Remove previous filter:
+
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_remove_filter('log_all ');</copy>
+    ```
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_flush();</copy>
+    ```
+
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_filter('log_all', '{ "filter": { "log": true } }');</copy>
+
 
 
 
