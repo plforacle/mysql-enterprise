@@ -54,6 +54,11 @@ This lab assumes you have:
     ```
     <copy>audit_log_rotate_on_size=20971520</copy>
     ```
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>audit_log_format=JSON</copy>
+    ```
+    
     d. Restart MySQL (you can configure audit without restart the server, but here we show how to set the configuration file)
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
@@ -82,7 +87,7 @@ This lab assumes you have:
     ```
     d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>SELECT Code, Name, Region FROM country WHERE population > 200000;</copy>
+    <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
     ```
 2. Open the audit.log file the datadir and verify the content
 
