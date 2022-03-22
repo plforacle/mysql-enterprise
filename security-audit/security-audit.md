@@ -187,7 +187,6 @@ This lab assumes you have:
     ```
     <copy>SELECT audit_log_filter_set_user('appuser1@<client IP>', 'log_all');</copy>
     ```
-    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
 5.  Login to mysql-enterprise with the user “appuser1”, then submit some commands
 
@@ -245,7 +244,7 @@ This lab assumes you have:
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SET @f='                                                        
+    <copy>SET @f='
  {
     "filter": {
        "class": 
@@ -258,7 +257,18 @@ This lab assumes you have:
             }
          }
      }
-}';                                            ;</copy>
+}';</copy>
+
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_filter('salary_insert', @f);</copy>
+    ```
+    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_user(%, 'salary_insert');</copy>
+    ```
 
 
 
