@@ -153,7 +153,7 @@ This lab assumes you have:
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SELECT audit_log_filter_set_user('appuser1'@'<client IP>', 'log_all');</copy>
+    <copy>SELECT audit_log_filter_set_user('appuser1@<client IP>', 'log_all');</copy>
     ```
     c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
