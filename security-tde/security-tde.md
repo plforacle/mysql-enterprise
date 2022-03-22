@@ -104,31 +104,31 @@ This lab assumes you have:
     ```
 
 
+6.	Administrative commands
 
-5.	Open a second SSH connection (don't close the administrative one) and use it to connect as “fwtest” and submit some commands
-
-    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>mysql -ufwtest -p -P3307 -h127.0.0.1</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>USE world;</copy>
-    ```
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT * FROM city limit 25;</copy>
-    ```
-    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT Code, Name, Region FROM country WHERE population > 200000;</copy>
-    ```
-6.	Administrative connection: Return to admin session (first SSH connection terminal) and verify that there are now rules in allowlist (noticed that we interrogate temporary rules from information schema) 
-
+    a. Get details on encrypted key file:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>SELECT * FROM information_schema.mysql_firewall_whitelist;</copy>
+    <copy>SHOW VARIABLES LIKE 'keyring_encrypted_file_data'\G</copy>
     ```
+
+    b. Set default for all tables to be encrypted when creating them:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SET GLOBAL default_table_encryption=ON;</copy>
+    ```
+
+    c. Encrypt the mysql System Tables:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>ALTER TABLESPACE mysql ENCRYPTION = 'Y';</copy>
+
+    d. Show all the encrypted tables:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>SELECT SPACE, NAME, SPACE_TYPE, ENCRYPTION FROM INFORMATION_SCHEMA.INNODB_TABLESPACES WHERE ENCRYPTION='Y'\G</copy>
+
+
 7.	Administrative connection: switch Firewall mode from 'recording' to 'protecting' and verify the presence of rules in allowlist
 
     a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
