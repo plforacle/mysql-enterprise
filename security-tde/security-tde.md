@@ -30,7 +30,7 @@ This lab assumes you have:
 - https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html
 
 
-## Task 1: Install and connect  Firewall
+## Task 1: Install and setup TDE  
 1.	Install MySQL Enterprise Firewall on mysql-advanced using CLI (you can’t install on mysql-gpl, why? 
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
