@@ -80,6 +80,7 @@ This lab assumes you have:
     a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
     <copy>strings "/mysql/data/employees/employees.ibd" | head -n50</copy>
+    ```
 
 
 4.	Now we enable Encryption on the employees.employees table:
