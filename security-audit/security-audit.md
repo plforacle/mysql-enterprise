@@ -329,12 +329,10 @@ This lab assumes you have:
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [Writing Audit Filters](https://dev.mysql.com/doc/refman/8.0/en/audit-log-filtering.html)
 * [Audit Filter Definitions](https://dev.mysql.com/doc/refman/8.0/en/audit-log-filter-definitions.html)
 
 ## Acknowledgements
-* **Author** - Perside Foster, MySQL Engineering
-* **Contributors** -  Marco Carlessi, MySQL Engineering
-* **Last Updated By/Date** - <Perside Foster, October 2021
+* **Author** - Dale Dasker, MySQL Solution Engineering
+* **Contributors** -  
+* **Last Updated By/Date** - <Dale Dasker, March 2022
