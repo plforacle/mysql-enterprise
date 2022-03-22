@@ -31,25 +31,21 @@ This lab assumes you have:
 
 
 ## Task 1: Install and setup TDE  
-1.	Install MySQL Enterprise Firewall on mysql-advanced using CLI (you can’t install on mysql-gpl, why? 
+1.	Install MySQL Enterprise Transparent Data Encrytption on mysql-enterprise using Administrative MySQL client connections 
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>mysql -uadmin -p -P3307 -h127.0.0.1 < /mysql/mysql-latest/share/linux_install_firewall.sql</copy>
+    <copy>mysql -u root -p -P3306 -h127.0.0.1 </copy>
     ```
-2.	Connect to the instance with administrative account first SSH connection - administrative
+2.	Check to see if any keyring plugin is installed and load if not:
 
-    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>mysql -uroot -p -P3307 -h127.0.0.1</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SHOW GLOBAL VARIABLES LIKE 'mysql_firewall_mode'; </copy>
+    <copy>SELECT PLUGIN_NAME, PLUGIN_STATUS FROM INFORMATION_SCHEMA.PLUGINS WHERE PLUGIN_NAME LIKE 'keyring%'; </copy>
     ```
     c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>SHOW GLOBAL STATUS LIKE "firewall%";</copy>
+    <copy>INSTALL PLUGIN keyring_udf SONAME 'keyring_udf.so';</copy>
     ```
 3.	Create a new user 'fwtest' and assign full privileges to database world
 
