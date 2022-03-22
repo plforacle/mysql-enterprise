@@ -97,6 +97,7 @@ This lab assumes you have:
     ```
 
      h. Monitor the output of the audit.log file:
+
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
     <copy>tail -f /mysql/data/audit.log</copy>
