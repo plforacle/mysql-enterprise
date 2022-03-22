@@ -125,8 +125,25 @@ This lab assumes you have:
     <copy>SELECT emp_no,salary FROM employees.salaries WHERE salary > 90000;</copy>
     ```
    
-    ``` 
-2. Open the audit.log file the datadir and verify the content
+2. Let's setup Audit to only log connections. Using the Administrative Connection, create a Audit Filter for all connections 
+
+    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SET @f = '{ "filter": { "class": { "name": "connection" } } }';</copy>
+    ```
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_filter('log_conn_events', @f);</copy>
+    ```
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_user('%', 'log_conn_events');</copy>
+    ```
+
+3. Open the audit.log file the datadir and verify the content
 
      **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
