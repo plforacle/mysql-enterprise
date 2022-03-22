@@ -74,30 +74,34 @@ This lab assumes you have:
     <copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf $MYSQLD_OPTS &</copy>
     ```
 
-3.	Create a new user 'fwtest' and assign full privileges to database world
 
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+3.	"Spy" on employees.employees table
+
+    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>CREATE USER 'fwtest'@'%' IDENTIFIED BY 'Welcome1!';</copy>
+    <copy>strings "/mysql/data/employees/employees.ibd" | head -n50</copy>
+
+
+4.	Now we enable Encryption on the employees.employees table:
+
+    a.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
+    <copy>mysql -u root -p -P3306 -h127.0.0.1 </copy>
+    ```
+
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>GRANT ALL PRIVILEGES ON world.* TO 'fwtest'@'%';</copy>
+    <copy>ALTER TABLE employees ENCRYPTION = 'Y';</copy>
     ```
-4.	Now we set firewall in recording mode, to create a white list and verify that allowlist is empty
 
-    a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+5.	"Spy" on employees.employees table again:
+
+    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>CALL mysql.sp_set_firewall_mode('fwtest@%', 'RECORDING');</copy>
-    ```
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT * FROM mysql.firewall_users;</copy>
-    ```
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SELECT * FROM mysql.firewall_whitelist;</copy>
-    ```
+    <copy>strings "/mysql/data/employees/employees.ibd" | head -n50</copy>
+
+
 5.	Open a second SSH connection (don't close the administrative one) and use it to connect as “fwtest” and submit some commands
 
     a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
