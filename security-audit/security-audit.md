@@ -271,6 +271,25 @@ This lab assumes you have:
     <copy>SELECT audit_log_filter_set_user('%', 'salary_insert');</copy>
     ```
 
+8. Login as 'appuser1' and run a query against the salaries table;
+
+    a. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>mysql -u appuser1 -p -h127.0.0.1 -P 3306</copy>
+    ```
+
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+    ```
+    <copy>USE employees;</copy>
+    ```
+
+    a. Run updates on salaries table
+
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>UPDATE employees.salaries SET salary = 74234 WHERE emp_no = 10001;</copy>
+    ```
 
 
 
