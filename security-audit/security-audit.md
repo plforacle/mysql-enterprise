@@ -69,6 +69,22 @@ This lab assumes you have:
     ```
     <copy>sudo /mysql/mysql-latest/bin/mysqld --defaults-file=/mysql/etc/my.cnf $MYSQLD_OPTS &</copy>
     ```
+
+    e. Using the Administrative Connection, create a Audit Filter for all activity and all users
+
+	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_set_filter('log_all', '{ "filter": { "log": true } }');</copy>
+    ```
+
+	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>audit_log_filter_set_user('%', 'log_all');</copy>
+    ```
+
+
 ## Task 2: Use Audit 
 
 1. Login to mysql-enterprise with the user “appuser1”, then submit some commands
