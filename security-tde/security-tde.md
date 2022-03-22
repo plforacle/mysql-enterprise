@@ -43,10 +43,33 @@ This lab assumes you have:
     ```
     <copy>SELECT PLUGIN_NAME, PLUGIN_STATUS FROM INFORMATION_SCHEMA.PLUGINS WHERE PLUGIN_NAME LIKE 'keyring%'; </copy>
     ```
-    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    b. Edit the my.cnf setting in /mysql/etc/my.cnf
+
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>INSTALL PLUGIN keyring_udf SONAME 'keyring_udf.so';</copy>
+    <copy>sudo nano /mysql/etc/my.cnf</copy>
     ```
+    b. Add the following lines to load the plugin and set the encrypted key file
+
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>early-plugin-load=keyring_encrypted_file.so</copy>    
+    ```
+    ```
+    <copy>keyring_encrypted_file_data=/mysql/data/mysql-keyring/keyring-encrypted</copy>    
+    ```
+    ```
+    <copy>keyring_encrypted_file_password=V&rySec4eT</copy>    
+    ```
+
+    c. Shutdown and restart MySQL Server
+    
+     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+    ```
+    <copy>sudo  </copy>
+    ```
+
 3.	Create a new user 'fwtest' and assign full privileges to database world
 
     a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
