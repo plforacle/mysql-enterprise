@@ -245,7 +245,20 @@ This lab assumes you have:
     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SELECT audit_log_filter_set_filter('log_all', '{ "filter": { "log": true } }');</copy>
+    <copy>SET @f='                                                        
+ {
+    "filter": {
+       "class": 
+         {
+          "name": "table_access",
+          "event": 
+            {
+              "name": [ "insert", "update", "delete" ],
+              "log": { "field": { "name": "table_name.str", "value": "salaries" }}
+            }
+         }
+     }
+}';                                            ;</copy>
 
 
 
