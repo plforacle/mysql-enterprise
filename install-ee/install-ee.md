@@ -78,7 +78,7 @@ This lab assumes you have:
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo tar xvf /workshop/linux/mysql-commercial-8.0.28-el7-x86&#95;64.tar.gz</copy>
+    <copy>sudo tar xvf /workshop/8.0.28_tar/mysql-commercial-8.0.28-el7-x86&#95;64.tar.gz</copy>
     ```
 
 14.	Create a symbolic link to mysql binary installation
@@ -93,7 +93,7 @@ To help you we created one with some variables, please copy it
 
 17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo cp /workshop/support/my.cnf.first /mysql/etc/my.cnf</copy>
+    <copy>sudo cp /workshop/my.cnf.first /mysql/etc/my.cnf</copy>
     ```
 
 18.	For security reasons change ownership and permissions
@@ -105,7 +105,7 @@ To help you we created one with some variables, please copy it
 
 20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo chmod -R 750 /mysql</copy>
+    <copy>sudo chmod -R 755 /mysql</copy>
     ```
 
 21. The following permission is for the Lab purpose so that opc account can make changes and copy files to overwrite the content
@@ -180,7 +180,7 @@ To help you we created one with some variables, please copy it
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
-    <copy>sudo yum -y install /workshop/Shell/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
+    <copy>sudo yum -y install /workshop/Shell_rpm/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
     ```
 
 12.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
@@ -193,7 +193,7 @@ To help you we created one with some variables, please copy it
 
 15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
-    <copy>ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome1!'</copy>
+    <copy>ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
 14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
