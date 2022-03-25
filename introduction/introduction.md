@@ -2,19 +2,19 @@
 
 ## About this Workshop
 
-This workshop covers the configuration and testing of MySQL Security Based Enterprise Features.  We will go through how to setup and run Enterprise Audit and Transparent Data Encryption.
+This workshop covers the configuration and testing of 2 of the MySQL Security Based Enterprise Features.  We will go through how to setup and run Enterprise Audit and Transparent Data Encryption.
 
 Estimated Workshop Time: 1 hours 30 minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
+
+Your Free Tier server should be accessible for a couple of days so what you do not finish when following instruction will be able to be covered later at your own pace.
 
 
 ## Objectives
 
-
-
 In this workshop, you will learn how to work with 
 - MySQL Enterprise Edition
 - MySQL Shell
-- MySQL Enterprise Audit and Masking
+- MySQL Enterprise Audit
 - MySQL Enterprise Transparent Data Encryption 
 
 ## Learn More
