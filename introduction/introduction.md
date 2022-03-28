@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop covers the configuration and testing of 2 of the MySQL Security Based Enterprise Features.  We will go through how to setup and run Enterprise Audit and Transparent Data Encryption.
+Securing the data stored in your MySQL Server is key towards avoiding breaches and achieving Regulatory Compliance.  This workshop covers the installatin, configuration and testing of 2 of the MySQL Security Based Enterprise Features.  We will go through how to setup and run Enterprise Audit and Transparent Data Encryption.
 
 Estimated Workshop Time: 1 hours 30 minutes (This estimate is for the entire workshop - it is the sum of the estimates provided for each of the labs included in the workshop.)
 

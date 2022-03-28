@@ -2,7 +2,8 @@
 
 ## Introduction
 
-1) Client Setup
+Environment Setup
+
 Objective: Connect Personal Computer to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
 
 In this lab you will Download lab materials, plus connect your Personal Computer to the Oracle Network and the Oracle Cloud Infrastructure (OCI)
