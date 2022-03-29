@@ -190,11 +190,8 @@ To help you we created one with some variables, please copy it
     <copy>\quit</copy>
     ```
 
-<<<<<<< HEAD
-
 17.	Create a new administrative user called 'admin' with remote access and full privileges
-=======
-17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3306 shutdown</copy>
     ```
@@ -224,8 +221,7 @@ To help you we created one with some variables, please copy it
     ```
     <copy>sudo systemctl start mysqld-advanced</copy>
     ```
->>>>>>> a2ac9ab9346f1395cebed60b3910fd7f5359b352
-
+    
 18. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
     ```
     <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
