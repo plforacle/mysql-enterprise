@@ -78,14 +78,14 @@ This lab assumes you have:
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo tar xvf /workshop/mysql_8.0.28/mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64.tar.gz</copy>
+    <copy>sudo tar xvf /workspace/mysql_8.0.28/mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64.tar.xz</copy>
     ```
 
 14.	Create a symbolic link to mysql binary installation
 
 15. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo ln -s mysql-commercial-8.0.28-el7-x86&#95;64 mysql-latest</copy>
+    <copy>sudo ln -s mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64 mysql-latest</copy>
     ```
 
 16.	Create a new configuration file my.cnf inside /mysql/etc
