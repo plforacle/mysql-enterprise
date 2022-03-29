@@ -93,7 +93,7 @@ To help you we created one with some variables, please copy it
 
 17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo cp /workshop/my.cnf.first /mysql/etc/my.cnf</copy>
+    <copy>sudo cp /workspace/my.cnf.first /mysql/etc/my.cnf</copy>
     ```
 
 18.	For security reasons change ownership and permissions
@@ -158,147 +158,129 @@ To help you we created one with some variables, please copy it
     <copy>grep -i 'temporary password' /mysql/log/err&#95;log.log</copy>
     ```
 
-10.	Before version 5.7 it was recommended to run the mysql&#95;secure&#95;installation script. From version 5.7 all these settings are by default, but the script can be used also to setup the validate&#95;password plugin (used later). Now execute mysql&#95;secure&#95;installation
-
-. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>/mysql/mysql-latest/bin/mysql&#95;secure&#95;installation -P3306 -h127.0.0.1 </copy>
-    ```
-
-    **use the following  values**
-    - root password: retrieved from previous step
-    - new password: Welcome1!
-    - setup VALIDATE PASSWORD component: Y
-    - password validation policy: 2
-    - Change the password for root: N
-    - Remove anonymous users: Y
-    - Disallow root login remotely: N
-    - Remove test database: Y
-    - Reload privilege tables now: Y
-
-11. Install the MySQL Shell command line utility
+10. Install the MySQL Shell command line utility
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
     <copy>sudo yum -y install /workshop/Shell_rpm/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
     ```
 
-12.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
+11.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
 
-13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+12. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
     <copy>mysqlsh --uri root@localhost:3306 --sql -p</copy>
     ```
-14. Creat New Password for MySQL Root
+13. Creat New Password for MySQL Root
 
-15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
-14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\status</copy>
     ```
 
-15.	Shutdown the service
+16.	Shutdown the service
 
-16. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+17. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\quit</copy>
     ```
 
-17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+18. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3306 shutdown</copy>
     ```
 
-18.	Configure automatic startup and shutdown with system.
+19.	Configure automatic startup and shutdown with system.
     - Add a systemd service unit configuration file with details about the MySQL service. 
     - The file is named mysqld.service and is placed in /usr/lib/systemd/system. We created one for you (See addendum for the content)
 
-19. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
     <copy>sudo cp /workshop/support/mysqld-advanced.service /usr/lib/systemd/system/</copy>
     ```
-20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+21. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo chmod 644 /usr/lib/systemd/system/mysqld-advanced.service</copy>
     ```
 
-21. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+22. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl enable mysqld-advanced.service</copy>
     ```
-22.	Test start, stop and restart
+23.	Test start, stop and restart
 
-23. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+24. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl start mysqld-advanced</copy>
     ```
 
-24. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+25. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
 
-25. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+26. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl stop mysqld-advanced</copy>
     ```
 
-26. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+27. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
-27. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+28. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl restart mysqld-advanced</copy>
     ```
 
-28. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+29. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
 
-29.	Create a new administrative user called 'admin' with remote access and full privileges
+30.	Create a new administrative user called 'admin' with remote access and full privileges
 
-30. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
+31. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
     ```
     <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
     ```
 
-31. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+32. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>CREATE USER 'admin'@'%' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
-32. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+33. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;</copy>
     ```
 
-33.	Add the mysql bin folder to the bash profile
+34.	Add the mysql bin folder to the bash profile
 
-34. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+35. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\quit</copy>
     ```
 
-35. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+36. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>nano /home/opc/.bash&#95;profile</copy>
     ```
 
-36. At to the PATH variable “/mysql/mysql-latest/bin:” 
+37. At to the PATH variable “/mysql/mysql-latest/bin:” 
 
     after $PATH You’ll have something like
 
     PATH=$PATH:/mysql/mysql-latest/bin:$HOME/.local/bin:$HOME/bin
 
-37. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
+38. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
 
 
 ## Learn More
