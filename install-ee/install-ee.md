@@ -169,7 +169,7 @@ To help you we created one with some variables, please copy it
 
 12.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
-    <copy>mysqlsh --uri root@localhost:3306 --sql -p</copy>
+    <copy>mysqlsh --uri root@localhost:3306 --sql -p </copy>
     ```
 
 13. Creat New Password for MySQL Root
