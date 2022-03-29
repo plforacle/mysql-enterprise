@@ -171,7 +171,8 @@ To help you we created one with some variables, please copy it
     <copy>mysqlsh --uri root@localhost:3306 --sql -p </copy>
     ```
 
-12. Creat New Password for MySQL Root
+12. Create:w
+ New Password for MySQL Root
 
 13. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
