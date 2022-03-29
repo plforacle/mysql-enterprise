@@ -167,10 +167,11 @@ To help you we created one with some variables, please copy it
 
 11.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
 
-12. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
-    ```
+12.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+     ```
     <copy>mysqlsh --uri root@localhost:3306 --sql -p</copy>
     ```
+
 13. Creat New Password for MySQL Root
 
 14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
