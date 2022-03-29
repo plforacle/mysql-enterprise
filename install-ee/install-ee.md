@@ -162,7 +162,7 @@ To help you we created one with some variables, please copy it
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
-    <copy>sudo yum -y install /workshop/Shell_rpm/mysql-shell-commercial-8.0.28-1.1.el7.x86_64.rpm</copy>
+    <copy>sudo yum -y install /workshop/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
     ```
 
 11.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
