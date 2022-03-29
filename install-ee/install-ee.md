@@ -213,6 +213,7 @@ To help you we created one with some variables, please copy it
     ```
     <copy>sudo systemctl enable mysqld-advanced.service</copy>
     ```
+    
 22.	Test start, stop and restart
 
 23. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
