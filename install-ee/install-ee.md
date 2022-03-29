@@ -164,124 +164,123 @@ To help you we created one with some variables, please copy it
      ```
     <copy>sudo yum -y install /workspace/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
     ```
+11. Login to the the mysql-enterprise installation and check the status (you will be asked to change password)
 
-11.	Login to you mysql-enterprise installation and check the status (you will be asked to change password). 
-
-12.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
     <copy>mysqlsh --uri root@localhost:3306 --sql -p </copy>
     ```
 
-13. Creat New Password for MySQL Root
+12. Creat New Password for MySQL Root
 
-14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+13. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
-15. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+14. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\status</copy>
     ```
 
-16.	Shutdown the service
+15.	Shutdown the service
 
-17. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+16. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\quit</copy>
     ```
 
-18. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3306 shutdown</copy>
     ```
 
-19.	Configure automatic startup and shutdown with system.
+18.	Configure automatic startup and shutdown with system.
     - Add a systemd service unit configuration file with details about the MySQL service. 
     - The file is named mysqld.service and is placed in /usr/lib/systemd/system. We created one for you (See addendum for the content)
 
-20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+19. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
     <copy>sudo cp /workshop/support/mysqld-advanced.service /usr/lib/systemd/system/</copy>
     ```
-21. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo chmod 644 /usr/lib/systemd/system/mysqld-advanced.service</copy>
     ```
 
-22. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+21. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl enable mysqld-advanced.service</copy>
     ```
-23.	Test start, stop and restart
+22.	Test start, stop and restart
 
-24. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+23. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl start mysqld-advanced</copy>
     ```
 
-25. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+24. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
 
-26. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+25. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl stop mysqld-advanced</copy>
     ```
 
-27. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+26. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
-28. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+27. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo systemctl restart mysqld-advanced</copy>
     ```
 
-29. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+28. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
     <copy>sudo systemctl status mysqld-advanced</copy>
     ```
 
-30.	Create a new administrative user called 'admin' with remote access and full privileges
+29.	Create a new administrative user called 'admin' with remote access and full privileges
 
-31. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
+30. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
     ```
     <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
     ```
 
-32. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+31. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>CREATE USER 'admin'@'%' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
-33. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+32. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;</copy>
     ```
 
-34.	Add the mysql bin folder to the bash profile
+33.	Add the mysql bin folder to the bash profile
 
-35. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
+34. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>**
     ```
     <copy>\quit</copy>
     ```
 
-36. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+35. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>nano /home/opc/.bash&#95;profile</copy>
     ```
 
-37. At to the PATH variable “/mysql/mysql-latest/bin:” 
+36. At to the PATH variable “/mysql/mysql-latest/bin:” 
 
     after $PATH You’ll have something like
 
     PATH=$PATH:/mysql/mysql-latest/bin:$HOME/.local/bin:$HOME/bin
 
-38. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
+37. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
 
 
 ## Learn More
