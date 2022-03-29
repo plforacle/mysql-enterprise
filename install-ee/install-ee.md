@@ -190,38 +190,9 @@ To help you we created one with some variables, please copy it
     <copy>\quit</copy>
     ```
 
+
 17.	Create a new administrative user called 'admin' with remote access and full privileges
-    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>/mysql/mysql-latest/bin/mysqladmin -uroot -h127.0.0.1 -p -P3306 shutdown</copy>
-    ```
 
-18.	Configure automatic startup and shutdown with system.
-    - Add a systemd service unit configuration file with details about the MySQL service. 
-    - The file is named mysqld.service and is placed in /usr/lib/systemd/system. We created one for you (See addendum for the content)
-
-19. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-
-    ```
-    <copy>sudo cp /workshop/mysqld-advanced.service /usr/lib/systemd/system/</copy>
-    ```
-20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>sudo chmod 644 /usr/lib/systemd/system/mysqld-advanced.service</copy>
-    ```
-
-21. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>sudo systemctl enable mysqld-advanced.service</copy>
-    ```
-    
-22.	Test start, stop and restart
-
-23. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>sudo systemctl start mysqld-advanced</copy>
-    ```
-    
 18. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
     ```
     <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
