@@ -107,8 +107,8 @@ This lab assumes you have:
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Creating SSH Keys](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/managingkeypairs.htm)
+* [Compute SSH Connections](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
