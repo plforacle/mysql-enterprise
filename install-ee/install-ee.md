@@ -202,7 +202,7 @@ To help you we created one with some variables, please copy it
 19. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
-    <copy>sudo cp /workshop/support/mysqld-advanced.service /usr/lib/systemd/system/</copy>
+    <copy>sudo cp /workshop/mysqld-advanced.service /usr/lib/systemd/system/</copy>
     ```
 20. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
