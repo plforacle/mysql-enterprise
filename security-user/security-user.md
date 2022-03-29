@@ -48,19 +48,19 @@ This lab assumes you have:
 	a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>CREATE USER 'appuser1'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    <copy>CREATE USER 'appuser1'@'127.0.0.1' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
 	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@<client_ip>;</copy>
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@'127.0.0.1';</copy>
     ```
 
 	c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
+    <copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
     ```
 ## Task 2: Connect to a second mysql-enterprise on Server
 1. Open a new SSH connection on Server and from there connect to mysql-enterprise with appuser1
@@ -70,7 +70,7 @@ This lab assumes you have:
    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
-    <copy>mysql -u appuser1 -p -h <server_ip> -P 3306</copy>
+    <copy>mysql -u appuser1 -p -h 127.0.0.1 -P 3306</copy>
     ```
 	b. Run a select on the tables e.g.
 
@@ -91,13 +91,13 @@ This lab assumes you have:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>REVOKE SELECT ON employees.* FROM 'appuser1'@<client_ip>;</copy>
+    <copy>REVOKE SELECT ON employees.* FROM 'appuser1'@'127.0.0.1';</copy>
     ```
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
+    <copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
     ```
 3. Repeat the select on appuser connection for the user. There is a difference?
 
