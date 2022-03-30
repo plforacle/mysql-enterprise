@@ -58,24 +58,8 @@ Please note that now you have an instance on the server on port 3306. To connect
     ```
     <copy>exit</copy>
     ```
-4.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-
-    ```
-    <copy>mysql -u root -p --protocol=tcp -P3306</copy>
-    ```
-5.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-
-    ```
-    <copy>status</copy>
-    ```
-
-6.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-
-    ```
-    <copy>exit</copy>
-    ```
 	
-7.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+4.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
     <copy>mysql -uroot -p -h localhost -P3310 --protocol=tcp </copy>

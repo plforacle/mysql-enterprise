@@ -151,19 +151,20 @@ To help you we created one with some variables, please copy it
     <copy>grep -i ready /mysql/log/err&#95;log.log</copy>
     ```
 
-8.	Retrieve root password for first login
-
-9.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
-    ```
-    <copy>grep -i 'temporary password' /mysql/log/err&#95;log.log</copy>
-    ```
-
-10. Install the MySQL Shell command line utility
+8. Install the MySQL Shell command line utility
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
     <copy>sudo yum -y install /workspace/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
     ```
+
+9.	Retrieve root password for first login
+
+10.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+    ```
+    <copy>grep -i 'temporary password' /mysql/log/err&#95;log.log</copy>
+    ```
+
 11. Login to the the mysql-enterprise installation and check the status (you will be asked to change password)
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
