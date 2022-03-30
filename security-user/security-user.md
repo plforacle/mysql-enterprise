@@ -119,7 +119,7 @@ This lab assumes you have:
 	**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
 
     ```
-    <copy>mysql -u appuser1 -p -h <server_ip> -P 3306</copy>
+    <copy>mysql -u appuser1 -p -h 127.0.0.1 -P 3306</copy>
     ```
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
@@ -134,22 +134,22 @@ This lab assumes you have:
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 	```
-	<copy>REVOKE USAGE ON *.* FROM 'appuser1'@<client_ip>;</copy>
+	<copy>REVOKE USAGE ON *.* FROM 'appuser1'@'127.0.0.1';</copy>
 	```
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 	```
-	<copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
+	<copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
 	```
 
 3.	Using the administrative connection revoke all privileges using and administrative connection and verify
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 	```
-    <copy>REVOKE ALL PRIVILEGES ON *.* FROM 'appuser1'@<client_ip>;</copy>
+    <copy>REVOKE ALL PRIVILEGES ON *.* FROM 'appuser1'@'127.0.0.1';</copy>
     ```
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 	```
-    <copy>SHOW GRANTS FOR 'appuser1'@<client_ip>;</copy>
+    <copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
     ```   
 4.	Close and reopen appuser session, do you see schemas?
 
@@ -158,7 +158,7 @@ This lab assumes you have:
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
     ```
-    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@<client_ip>;</copy>
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@'127.0.0.1';</copy>
     ```
 2.	Using the administrative connection, what are your password settings?
 
@@ -170,22 +170,22 @@ This lab assumes you have:
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>alter user 'appuser1'@<client_ip> identified by 'appuser';</copy>
+    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'appuser';</copy>
     ```
 	
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>alter user 'appuser1'@<client_ip> identified by 'Welcome';</copy>
+    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'Welcome';</copy>
     ```
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
-    <copy>alter user 'appuser1'@<client_ip>identified by 'We1!';</copy>
+    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'We1!';</copy>
     ```
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
     ```
-    <copy>alter user 'appuser'@<client_ip> identified by 'Welcome1!'</copy>
+    <copy>alter user 'appuser'@'127.0.0.1' identified by 'Welcome1!'</copy>
     ```
 
 ## Task 5: Add additional users
@@ -195,13 +195,13 @@ This lab assumes you have:
 	a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>CREATE USER 'appuser2'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    <copy>CREATE USER 'appuser2'@'127.0.0.1' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
 	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser2'@<client_ip>;</copy>
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser2'@'127.0.0.1';</copy>
     ```
 
 2. Using the Administrative Connection, create another new user and restrict the user to your “Server” IP
@@ -209,13 +209,13 @@ This lab assumes you have:
     a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>CREATE USER 'appuser3'@<client_ip> IDENTIFIED BY 'Welcome1!';</copy>
+    <copy>CREATE USER 'appuser3'@'127.0.0.1' IDENTIFIED BY 'Welcome1!';</copy>
     ```
 
 	b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
-    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser3'@<client_ip>;</copy>
+    <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser3'@'127.0.0.1';</copy>
     ```
 
 
