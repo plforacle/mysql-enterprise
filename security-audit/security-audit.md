@@ -190,6 +190,11 @@ This lab assumes you have:
     ```
     <copy>SELECT audit_log_filter_set_user('appuser1@127.0.0.1', 'log_all');</copy>
     ```
+    d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+    <copy>SELECT audit_log_filter_flush();</copy>
+    ```
 
 
 5.  Login to mysql-enterprise with the user “appuser1”, then submit some commands
