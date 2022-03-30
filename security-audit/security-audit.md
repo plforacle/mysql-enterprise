@@ -345,5 +345,4 @@ This lab assumes you have:
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
-* **Contributors** -  
 * **Last Updated By/Date** - <Dale Dasker, March 2022
