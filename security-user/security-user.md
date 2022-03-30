@@ -33,7 +33,7 @@ This lab assumes you have:
 
 - serverA  PRIVATE ip: (client_ip)
 
-## Task 1: Connect to mysql-enterprise om Server
+## Task 1: Connect to mysql-enterprise on Server
 
 1. Connect to your mysql-enterprise with administrative user
 
@@ -160,33 +160,6 @@ This lab assumes you have:
     ```
     <copy>GRANT ALL PRIVILEGES ON employees.* TO 'appuser1'@'127.0.0.1';</copy>
     ```
-2.	Using the administrative connection, what are your password settings?
-
-	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>SHOW VARIABLES LIKE 'validate_password%';</copy>
-    ```
-3.	Try to set unsecure passwords for appuser
-
-	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'appuser';</copy>
-    ```
-	
-	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'Welcome';</copy>
-    ```
-
-	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>alter user 'appuser1'@'127.0.0.1' identified by 'We1!';</copy>
-    ```
-
-	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
-    ```
-    <copy>alter user 'appuser'@'127.0.0.1' identified by 'Welcome1!'</copy>
-    ```
 
 ## Task 5: Add additional users
 
@@ -221,12 +194,9 @@ This lab assumes you have:
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [CREATE USER](https://dev.mysql.com/doc/refman/8.0/en/create-user.html)
 * [MySQL Access Control Lists](https://dev.mysql.com/doc/refman/8.0/en/access-control.html)
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
-* **Contributors** -  Perside Foster, MySQL Engineering
 * **Last Updated By/Date** - <Dale Dasker, March 2022
