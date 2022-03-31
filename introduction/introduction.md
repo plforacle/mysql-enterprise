@@ -19,8 +19,6 @@ In this workshop, you will learn how to work with
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [MySQL Home Page](https://www.mysql.com/)
 * [MySQL Enterprise Audit](https://dev.mysql.com/doc/refman/8.0/en/audit-log.html)
 * [MySQL Enterprise Transparent Data Encryption](https://dev.mysql.com/doc/refman/8.0/en/innodb-data-encryption.html)

@@ -90,7 +90,12 @@ This lab assumes you have:
     <copy>mysql -u root -p -P3306 -h127.0.0.1 </copy>
     ```
 
-    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+    ```
+    <copy>USE employees;</copy>
+    ```
+
+    c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>ALTER TABLE employees ENCRYPTION = 'Y';</copy>
     ```
