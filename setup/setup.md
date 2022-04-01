@@ -103,6 +103,7 @@ This lab assumes you have:
     6. Return to "Session" and click save
     ![Image alt text](images/putty-5.png)
 
+
 ## Task 5: Setup workshop directory on Server
 
 
@@ -142,12 +143,9 @@ This lab assumes you have:
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [Creating SSH Keys](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/managingkeypairs.htm)
 * [Compute SSH Connections](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
-* **Contributors** -  Dale Dasker, MySQL Solution Engineering
 * **Last Updated By/Date** - <Dale Dasker, March 2022
