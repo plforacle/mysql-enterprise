@@ -232,8 +232,6 @@ To help you we created one with some variables, please copy it
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
 * [MySQL Linux Installation](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html)
 * [MySQL Shell Installation](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html)
 
