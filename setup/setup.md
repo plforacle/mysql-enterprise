@@ -133,7 +133,7 @@ This lab assumes you have:
     
     4.  Extract workshop files 
 
-      **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+       **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
       ```
       <copy>sudo tar xvf workshop.tar.gz </copy>
       ```
