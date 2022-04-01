@@ -132,9 +132,6 @@ This lab assumes you have:
     ```
     <copy>sudo curl -u vsftp_user:vsftp_Pa33w0rd  -o workshop.tar.gz ftp://129.158.254.37/workshop.tar.gz</copy>
     ```
-    ```
-    <copy>sudo wget ftp://vsftp_user:vsftp_Pa33w0rd@129.158.254.37/workshop.tar.gz </copy>
-    ```
     
 4.  Extract workshop files 
 
