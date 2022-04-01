@@ -105,6 +105,16 @@ This lab assumes you have:
 
 ## Task 5: Setup workshop directory on Server
 
+
+1. Examples of connections: 
+
+  *Linux:* use “id_rsa” key file
+
+  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>ssh -i id_rsa opc@public_ip </copy>
+    ```
+
     1.	SSH to Server
 
       **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
