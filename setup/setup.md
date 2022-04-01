@@ -130,7 +130,7 @@ This lab assumes you have:
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo curl -u vsftp_user:vsftp_Pa33w0rd  -o workspace.tar.gz ftp://129.158.254.37/workshop.tar.gz</copy>
+    <copy>sudo curl -u vsftp_user:vsftp_Pa33w0rd  -o workshop.tar.gz ftp://129.158.254.37/workshop.tar.gz</copy>
     ```
     ```
     <copy>sudo wget ftp://vsftp_user:vsftp_Pa33w0rd@129.158.254.37/workshop.tar.gz </copy>
