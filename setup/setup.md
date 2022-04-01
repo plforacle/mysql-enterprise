@@ -140,6 +140,13 @@ This lab assumes you have:
     <copy>sudo tar xvf workshop.tar.gz </copy>
     ```
 
+5.  Setup for MySQL Client
+
+    **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>sudo ln -s /usr/lib64/libtinfo.so.6.1 /usr/lib64/libtinfo.so.5</copy>
+    ```
+
 
 ## Learn More
 
