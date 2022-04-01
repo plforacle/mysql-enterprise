@@ -78,7 +78,7 @@ This lab assumes you have:
 
 13. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
-    <copy>sudo tar xvf /workspace/mysql_8.0.28/mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64.tar.xz</copy>
+    <copy>sudo tar xvf /workshop/mysql_8.0.28/mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64.tar.xz</copy>
     ```
 
 14.	Create a symbolic link to mysql binary installation
@@ -93,7 +93,7 @@ To help you we created one with some variables, please copy it
 
 17. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
-    <copy>sudo cp /workspace/my.cnf.first /mysql/etc/my.cnf</copy>
+    <copy>sudo cp /workshop/my.cnf.first /mysql/etc/my.cnf</copy>
     ```
 
 18.	For security reasons change ownership and permissions
@@ -155,7 +155,7 @@ To help you we created one with some variables, please copy it
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
      ```
-    <copy>sudo yum -y install /workspace/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
+    <copy>sudo yum -y install /workshop/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
     ```
 
 9.	Retrieve root password for first login
