@@ -103,6 +103,42 @@ This lab assumes you have:
     6. Return to "Session" and click save
     ![Image alt text](images/putty-5.png)
 
+## Task 5: Setup workshop directory on Server
+
+1.	SSH to Server
+
+ **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>ssh -i id_rsa opc@public_ip </copy>
+    ```
+
+2.  Make /workshop Directory
+
+**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>sudo mkdir /workshop </copy>
+    ```
+
+3.  FTP workshop files 
+
+**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>cd /workshop </copy>
+    ```
+
+**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>sudo wget ftp://vsftp_user:vsftp_Pa33w0rd@129.158.254.37/workshop.tar.gz </copy>
+    ```
+    
+4.  Extract workshop files 
+
+**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
+    ```
+    <copy>sudo tar xvf workshop.tar.gz </copy>
+    ```
+
+
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
