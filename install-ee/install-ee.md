@@ -158,7 +158,7 @@ To help you we created one with some variables, please copy it
     <copy>sudo yum -y install /workshop/shell/mysql-shell-commercial-8.0.28-1.1.el8.x86_64.rpm</copy>
     ```
 
-9.	Retrieve root password for first login
+9.	Retrieve root password for first login:
 
 10.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
@@ -237,5 +237,4 @@ To help you we created one with some variables, please copy it
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
-* **Contributors** -  Dale Dasker, MySQL Solution Engineering
-* **Last Updated By/Date** - <Dale Dasker, March 2022
+* **Last Updated By/Date** - <Dale Dasker, April 2022
