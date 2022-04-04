@@ -25,7 +25,7 @@ This lab assumes you have:
 ## Task 1: Download Lab Material and SSH client
 1. lectures pdf
 2. lab guide
-3. SSH keys to connect labs (it’s the same key in two different formats)
+3. SSH keys to connect labs (it’s the same key in two different formats).  These keys should have been created when you were creating your Compute Instance.  
     * id_rsa in native openssl format. Use it with Workbench
     * id_rsa.ppk in putty format for windows. Use it only with putty
 4. If you have not yet installed an SSH client on your laptop, please install one
@@ -38,6 +38,8 @@ This lab assumes you have:
   - Hostname FQDN:  
   - Public IP:   (e.g. 130.61.56.195) 
   - Private IP: (e.g. 10.0.11.18)
+
+![IP Addresses](images/Setup_IP_Addresses.png) 
 
 ## Task 3: Review Misc Lab Information
 1. Document standard 
