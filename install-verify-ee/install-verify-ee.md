@@ -145,10 +145,9 @@ Please note that now you have an instance on the server on port 3306. To connect
 
 *(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [MySQL Tutorial](https://dev.mysql.com/doc/refman/8.0/en/tutorial.html)
+* [URL text 2](le.com)
 
 ## Acknowledgements
 * **Author** - Dale Dasker, MySQL Solution Engineering
-* **Contributors** -  Perside Foster, MySQL Engineering
-* **Last Updated By/Date** - <Dale Dasker, March 2022
+* **Last Updated By/Date** - <Dale Dasker, April 2022
