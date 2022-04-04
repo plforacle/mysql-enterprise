@@ -39,6 +39,8 @@ This lab assumes you have:
   - Public IP:   (e.g. 130.61.56.195) 
   - Private IP: (e.g. 10.0.11.18)
 
+ **Example:**
+
 ![IP Addresses](images/Setup_IP_Addresses.png) 
 
 ## Task 3: Review Misc Lab Information
