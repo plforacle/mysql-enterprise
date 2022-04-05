@@ -129,7 +129,13 @@ This lab assumes you have:
     <copy>ALTER TABLESPACE mysql ENCRYPTION = 'Y';</copy>
     ```
 
-    d. Show all the encrypted tables:
+    d. Validate encryption of the mysql System Tables:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>strings "/mysql/data/mysql.ibd" | head -n70</copy>
+    ```
+
+    e. Show all the encrypted tables:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>SELECT SPACE, NAME, SPACE_TYPE, ENCRYPTION FROM INFORMATION_SCHEMA.INNODB_TABLESPACES WHERE ENCRYPTION='Y'\G</copy>
