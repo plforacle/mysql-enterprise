@@ -123,19 +123,25 @@ This lab assumes you have:
     <copy>SET GLOBAL default_table_encryption=ON;</copy>
     ```
 
-    c. Encrypt the mysql System Tables:
-    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
-    ```
-    <copy>ALTER TABLESPACE mysql ENCRYPTION = 'Y';</copy>
-    ```
-
-    d. Validate encryption of the mysql System Tables:
+    c. Peek on the mysql System Tables:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>strings "/mysql/data/mysql.ibd" | head -n70</copy>
     ```
 
-    e. Show all the encrypted tables:
+    d. Encrypt the mysql System Tables:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>ALTER TABLESPACE mysql ENCRYPTION = 'Y';</copy>
+    ```
+
+    e. Validate encryption of the mysql System Tables:
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+    ```
+    <copy>strings "/mysql/data/mysql.ibd" | head -n70</copy>
+    ```
+
+    f. Show all the encrypted tables:
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>SELECT SPACE, NAME, SPACE_TYPE, ENCRYPTION FROM INFORMATION_SCHEMA.INNODB_TABLESPACES WHERE ENCRYPTION='Y'\G</copy>
