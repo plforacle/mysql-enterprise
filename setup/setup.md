@@ -24,7 +24,7 @@ This lab assumes you have:
 
 ## Task 1: Download Lab Material and SSH client
 1. lectures pdf
-2. [lab guide][../files/MySQL_Enterprise_Edition_Bootcamp.pdf]
+2. [lab guide][files/MySQL_Enterprise_Edition_Bootcamp.pdf]
 3. SSH keys to connect labs (it’s the same key in two different formats).  These keys should have been created when you were creating your Compute Instance.  
     * id_rsa in native openssl format. Use it with Workbench
     * id_rsa.ppk in putty format for windows. Use it only with putty
