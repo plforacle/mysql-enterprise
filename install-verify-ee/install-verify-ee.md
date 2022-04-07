@@ -62,9 +62,13 @@ Please note that now you have an instance on the server on port 3306. To connect
 4.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
-    <copy>mysql -uroot -p -h localhost -P3310 --protocol=tcp </copy>
+    <copy>mysql -uroot -p -h localhost -P3306 --protocol=tcp </copy>
     ```
+5.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**  
 
+    ```
+    <copy>exit</copy>
+    ```
 
 ## Task 3: Import Sample Databses
 
@@ -75,11 +79,11 @@ Please note that now you have an instance on the server on port 3306. To connect
     <copy>cd /workshop/database/employees/</copy>
     ```
 
-  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+2.  **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+
     ```
     <copy>mysql -uroot -p -P3306 -h 127.0.0.1 < ./employees.sql</copy>
     ```
-
 ## Task 4: Learn Useful SQL Statements
 
 1. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
@@ -118,29 +122,33 @@ Please note that now you have an instance on the server on port 3306. To connect
     ```
     <copy>SELECT table&#95;schema AS 'Schema', SUM( data&#95;length ) / 1024 / 1024 AS 'Data MB', SUM( index&#95;length ) / 1024 / 1024 AS 'Index MB', SUM( data&#95;length + index&#95;length ) / 1024 / 1024 AS 'Sum' FROM information&#95;schema.tables GROUP BY table&#95;schema ;</copy>
     ```
-9. The “\G” is like “;” with a different way to show results 
+8. The “\G” is like “;” with a different way to show results 
 
-  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+  a. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
     ```
     <copy>SHOW GLOBAL VARIABLES\G</copy>
     ```
-  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+  b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
     <copy>SHOW GLOBAL STATUS\G</copy>
     ```
-  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+  c. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
     <copy>SHOW FULL PROCESSLIST;</copy>
     ```
-  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
+  d. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**
 
     ```
     <copy>SHOW ENGINE INNODB STATUS\G</copy>
     ```
+9.  **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>**  
 
+    ```
+    <copy>exit</copy>
+    ```
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*

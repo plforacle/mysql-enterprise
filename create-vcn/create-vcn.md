@@ -7,7 +7,7 @@
 
 Set up a Virtual Cloud Network (VCN) to connect your Linux instance to the internet. You will configure all the components needed to create your virtual network.
 
-_Estimated Time:_ 15 minutes
+_Estimated Time:_ 10 minutes
 
 ### Objectives
 
@@ -16,8 +16,6 @@ In this lab, you will be guided through the following tasks:
 
 - Create Virtual Cloud Network 
 - Configure security list to allow MySQL incoming connections
-- Configure security list to allow HTTP incoming connections
-
 
 ### Prerequisites
 

@@ -31,13 +31,13 @@ This lab assumes you have:
     
 ## Task 1: Install MySQL Enterprise Edition
 
-**Note:** If not already connected with SSH, connect to **myclient** instance using Cloud Shell
-
-    (Example: ssh -i ~/.ssh/id_rsa opc@132.145.17….)
+**Note:** If not already connected with SSH
+- connect to **myclient** instance using Cloud Shell (**Example:** ssh -i ~/.ssh/id_rsa opc@132.145.17….)
 
     ```
-    <copy>ssh -i ~/.ssh/id_rsa opc@<your_compute_instance_ip></copy>
+<copy>ssh -i ~/.ssh/id_rsa opc@<your_compute_instance_ip></copy>
     ```
+
     ![CONNECT](./images/06connect01-signin.png " ")
 
 1. Usually to run mysql  the user “mysql” is used, but because it is already available we show here how create a new one.
@@ -92,7 +92,7 @@ This lab assumes you have:
 
 14.	Create a symbolic link to mysql binary installation
 
-15. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+**![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>sudo ln -s mysql-commercial-8.0.28-linux-glibc2.12-x86&#95;64 mysql-latest</copy>
     ```
@@ -203,7 +203,7 @@ To help you we created one with some variables, please copy it
 
 17.	Create a new administrative user called 'admin' with remote access and full privileges
 
-18. **![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh>** 
+18. **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
     ```
     <copy>mysqlsh --sql --uri root@127.0.0.1:3306 -p</copy>
     ```
@@ -230,11 +230,11 @@ To help you we created one with some variables, please copy it
     <copy>nano /home/opc/.bash&#95;profile</copy>
     ```
 
-24. At to the PATH variable “/mysql/mysql-latest/bin:” 
-
-    after $PATH You’ll have something like
-
-    PATH=$PATH:/mysql/mysql-latest/bin:$HOME/.local/bin:$HOME/bin
+24. After the value  **# User specific environment and startup programs**. Add the following line:
+    ```
+<copy>PATH=$PATH:/mysql/mysql-latest/bin:$HOME/.local/bin:$HOME/bin</copy>
+    ```
+    
 
 25. Save the changes, log out and log in again from the ssh for the changes to take effect on the user profile. 
 

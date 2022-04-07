@@ -10,7 +10,7 @@ Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts,
 
 In this lab, you use Oracle Cloud Infrastructure to create an Oracle Linux instance. 
 
-_Estimated Time:_ 15 minutes
+_Estimated Time:_ 10 minutes
 
 
 
@@ -25,7 +25,7 @@ In this lab, you will be guided through the following tasks:
 
 * An Oracle Free Tier or Paid Cloud Account
 * A web browser
-* Should have completed Lab 2
+* Should have completed Lab 1
 
 ## Task 1: Create SSH Key on OCI Cloud Shell
 
@@ -138,7 +138,7 @@ You will need a compute Instance to connect to your brand new MySQL database.
 
     ![CONNECT](./images/05compute08-a.png " ")
 
-## Task 3: SSH into Compute Instance 
+## Task 3: Connect to Compute Instance with SSH key
 
 To connect to **myclient** you will need to properly setup your SSH command. Do the following steps:
 

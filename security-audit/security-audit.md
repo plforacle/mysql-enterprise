@@ -25,12 +25,18 @@ This lab assumes you have:
     - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql> the command must be executed in a client like MySQL, MySQL Workbench
     - ![#ff9933](https://via.placeholder.com/15/ff9933/000000?text=+) mysqlsh> the command must be executed in MySQL shell
     
-**Notes:**
-- Audit can be activated and configured without stop the instance. In the lab we edit my.cnf to see how to do it in this way
+**Notes:** Audit can be activated and configured without stopping the instance. In the lab we edit my.cnf to see how to do it in this way
 
 ## Task 1: Setup Audit Log
 
-1. Enable Audit Log on mysql-enterprise (remember: you can’t install on mysql-gpl).  Audit is an Enterprise plugin.
+1.  If already connected to MySQL then exit
+
+    **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+
+    ```
+        <copy>exit</copy>
+    ```
+2. Enable Audit Log on mysql-enterprise (remember: you can’t install on mysql-gpl).  Audit is an Enterprise plugin.
 
     a. Edit the my.cnf setting in /mysql/etc/my.cnf
 
@@ -76,8 +82,15 @@ This lab assumes you have:
     ```
     <copy>mysql -uroot -p -h 127.0.0.1 -P 3306 < /workshop/audit_log_filter_linux_install.sql</copy>
     ```
+3. Connect to your mysql-enterprise with administrative user
 
-    f. Using the Administrative Connection, create a Audit Filter for all activity and all users
+   **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+
+    ```
+    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
+    ```
+
+    a. Using the Administrative Connection, create a Audit Filter for all activity and all users
 
 	**![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
@@ -91,12 +104,12 @@ This lab assumes you have:
     <copy>SELECT audit_log_filter_set_user('%', 'log_all');</copy>
     ```
 
-     g. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
+     b. **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
     ```
     <copy>exit</copy>
     ```
 
-     h. Monitor the output of the audit.log file:
+     c. Monitor the output of the audit.log file:
 
     **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>**
     ```
@@ -312,6 +325,12 @@ This lab assumes you have:
 
 
 9. Some Administrative commands for checking Audit filters and users.  Log in using the Administrative Connection,
+
+   **![#00cc00](https://via.placeholder.com/15/00cc00/000000?text=+) shell>** 
+
+    ```
+    <copy>mysql -uroot -p -h 127.0.0.1 -P 3306</copy>
+    ```
 
    a. Check existing filters:
 
