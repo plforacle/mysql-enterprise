@@ -63,7 +63,24 @@ This lab assumes you have:
     <copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
     ```
 ## Task 2: Connect to a second mysql-enterprise on Server
-1. Open a new SSH connection on Server and from there connect to mysql-enterprise with appuser1
+
+1. Create a duplicate  Cloud Shell Tab:
+
+    a. Right Click on tab menu
+
+    b. Click the "Duplicate Tab" item
+    
+    ![Duplicate](./images/duplicate_shell.png " ")
+
+    c. Wait for the second cloud shell to open and connect
+
+    ![Duplicate](./images/double_shell.png " ")
+    
+2. Open a new SSH connection on Server 
+
+    ```
+<copy>ssh -i ~/.ssh/id_rsa opc@<your_compute_instance_ip></copy>
+    ```
 
 	a. connect to mysql-enterprise with appuser1
     
@@ -86,7 +103,7 @@ This lab assumes you have:
     <copy>SELECT * FROM employees;</copy>
     ```
 
-2. Switch to the administrative connection revoke privilege on city to appuser
+3. Switch to the administrative connection revoke privilege on city to appuser
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
@@ -99,7 +116,7 @@ This lab assumes you have:
     ```
     <copy>SHOW GRANTS FOR 'appuser1'@'127.0.0.1';</copy>
     ```
-3. Repeat the select on appuser connection for the user. There is a difference?
+4. Repeat the select on appuser connection for the user. There is a difference?
 
     **![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) mysql>** 
 
